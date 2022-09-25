@@ -1,0 +1,20 @@
+# permissions for end users to view noderequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: noderequest-viewer-role
+rules:
+- apiGroups:
+  - cache.wukong.io
+  resources:
+  - noderequests
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cache.wukong.io
+  resources:
+  - noderequests/status
+  verbs:
+  - get

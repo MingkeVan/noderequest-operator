@@ -1,0 +1,19 @@
+domain: wukong.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: noderequest-operator
+repo: github.com/MingkeVan/noderequest-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: wukong.io
+  group: cache
+  kind: NodeRequest
+  path: github.com/MingkeVan/noderequest-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

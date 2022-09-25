@@ -1,0 +1,24 @@
+# permissions for end users to edit noderequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: noderequest-editor-role
+rules:
+- apiGroups:
+  - cache.wukong.io
+  resources:
+  - noderequests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.wukong.io
+  resources:
+  - noderequests/status
+  verbs:
+  - get

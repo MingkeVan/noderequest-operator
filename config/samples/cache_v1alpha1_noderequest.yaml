@@ -1,0 +1,6 @@
+apiVersion: cache.wukong.io/v1alpha1
+kind: NodeRequest
+metadata:
+  name: noderequest-sample
+spec:
+  # TODO(user): Add fields here
