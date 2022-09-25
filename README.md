@@ -39,9 +39,12 @@ make docker-push IMG=mikefan2019/noderequest-operator:v0.0.1
 
 make deploy IMG=mikefan2019/noderequest-operator:v0.0.1
 
-查看crd
-kubectl get noderequest
+查看crd 确定字段和数据正确
+kubectl get noderequest -oyaml
 
 查看controller
 kubectl get pod -n noderequest-operator-system
+
+查看日志
+kubectl logs -f noderequest-operator-controller-manager-5b4c8fd544-wjmmx -n noderequest-operator-system
 ```
